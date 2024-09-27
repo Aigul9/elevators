@@ -18,7 +18,7 @@ So, in the notation:
 - R (Right) = Б2 (B2)
 - C (Centre) = Б3 (B3)
 
-Neo4j does not support bidirectional relations, so each directed edge considered to be bidirectional.
+Neo4j does not support bidirectional relations, so each directed edge is considered to be bidirectional.
 
 There are 2 caveats:
 1. Two relations between the same floors refer to the 2 existent ways of reaching the locations.
