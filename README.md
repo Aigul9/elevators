@@ -9,9 +9,10 @@ One of our office buildings has an unusual elevator infrastructure: a double-car
 ## Notation
 
 Each node represents a floor number.
+
 Each edge represents a relation between two floors with a 'hallway' attribute.
 
-So, in my notation:
+So, in the notation:
 
 - L (Left) = Б1 (B1)
 - R (Right) = Б2 (B2)
