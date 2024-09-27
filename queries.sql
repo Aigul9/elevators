@@ -1,5 +1,6 @@
-LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/nodes.csv" AS csvLine
-CREATE (f:Floor {floor: csvLine.floor})
+--можно даже не загружать, иначе продублируются
+--LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/nodes.csv" AS csvLine
+--CREATE (f:Floor {floor: csvLine.floor})
 
 MATCH (n)
 RETURN n
@@ -16,3 +17,6 @@ MERGE (start)-[:DOWN {hall: csvLine.hall}]-(end)
 
 MATCH (n)-[r:REL]->()
 DELETE r
+
+MATCH (n)
+DETACH DELETE n
