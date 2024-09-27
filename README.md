@@ -27,6 +27,7 @@ There are 2 caveats:
 ## Usage
 
 Playground is available here: https://browser.neo4j.io/
+
 Credentials are stored in access.properties
 
 ## Example
