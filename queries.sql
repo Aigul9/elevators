@@ -11,23 +11,23 @@ RETURN n
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/edges_bidirectional.csv" AS csvLine
 MERGE (start:Floor {id: toInteger(csvLine.start_floor)})
 MERGE (end:Floor {id: toInteger(csvLine.end_floor)})
-MERGE (start)-[:REL {hall: csvLine.hall}]-(end)
+MERGE (start)-[:REL {hallway: csvLine.hallway}]-(end)
 
 --тестовые версии
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/edges_up.csv" AS csvLine
 MERGE (start:Floor {id: toInteger(csvLine.start_floor)})
 MERGE (end:Floor {id: toInteger(csvLine.end_floor)})
-MERGE (start)-[:UP {hall: csvLine.hall}]-(end);
+MERGE (start)-[:UP {hallway: csvLine.hallway}]-(end);
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/edges_down.csv" AS csvLine
 MERGE (start:Floor {id: toInteger(csvLine.start_floor)})
 MERGE (end:Floor {id: toInteger(csvLine.end_floor)})
-MERGE (start)-[:DOWN {hall: csvLine.hall}]-(end)
+MERGE (start)-[:DOWN {hallway: csvLine.hallway}]-(end)
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/test.csv" AS csvLine
 MERGE (start:Floor {id: toInteger(csvLine.start_floor)})
 MERGE (end:Floor {id: toInteger(csvLine.end_floor)})
-MERGE (start)-[:REL {hall: csvLine.hall, way: csvLine.way}]-(end)
+MERGE (start)-[:REL {hallway: csvLine.hallway, direction: csvLine.direction}]-(end)
 
 
 --удалить связи
