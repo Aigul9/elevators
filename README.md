@@ -1,5 +1,9 @@
 # elevators
 
+This is a small pet-project for the shortest elevator path analysis and subsequent usage in everyday life.
+
+Further ideas include creating a mobile app which would take a starting and ending points as an input and return the most convenient ways to reach the target place.
+
 ## Background
 
 One of our office buildings has an unusual elevator infrastructure: a double-car elevator system in a single shaft. There are 3 shafts in total located in a shape of a triangle, e.g.:
