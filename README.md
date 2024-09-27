@@ -12,6 +12,8 @@ One of our office buildings has an unusual elevator infrastructure: a double-car
 
 ## Notation
 
+The source data is located in data/ folder.
+
 Each node represents a floor number.
 
 Each edge represents a relation between two floors with a 'hallway' attribute.
@@ -33,6 +35,8 @@ There are 2 caveats:
 Playground is available here: https://browser.neo4j.io/
 
 Credentials are stored in access.properties
+
+Sample queries are listed in queries.sql
 
 ## Example
 
