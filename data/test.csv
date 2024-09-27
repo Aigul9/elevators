@@ -1,0 +1,3 @@
+start_floor,end_floor,hall,way
+26,1,C,down
+1,26,C,up
