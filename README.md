@@ -12,7 +12,7 @@ One of our office buildings has an unusual elevator infrastructure: a double-car
 
 ## Notation
 
-The source data is located in data/ folder.
+The source data is located in data/
 
 Each node represents a floor number.
 
