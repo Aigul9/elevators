@@ -6,7 +6,7 @@ Further ideas include creating a mobile app which would take the start and end p
 
 ## Background
 
-One of our office buildings has an unusual elevator infrastructure: a double-car elevator system in a single shaft. There are 3 shafts in total located in a shape of a triangle, e.g.:
+One of our office buildings has an unusual elevator infrastructure: a double-car elevator system in a single shaft. There are 3 hallways in total with multiple shafts located in a shape of a triangle, e.g.:
 
 ![image](https://github.com/user-attachments/assets/fd49ba16-1f2a-48e8-89f4-fbc340b04739)
 
