@@ -38,6 +38,8 @@ Credentials are stored in access.properties
 
 Sample queries are listed in queries.sql
 
+Raise an issue if the database is unavailable
+
 ## Example
 
 Full graph:
