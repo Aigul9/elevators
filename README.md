@@ -49,3 +49,6 @@ Full graph:
 Shortest paths:
 
 ![image](https://github.com/user-attachments/assets/ceb5e527-241f-4617-b9a5-97b3add9c225)
+
+![image](https://github.com/user-attachments/assets/01592a76-f266-4e5d-b039-fb8d290a7cc1)
+
