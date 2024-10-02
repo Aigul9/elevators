@@ -44,7 +44,7 @@ Raise an issue if the database is unavailable
 
 Full graph:
 
-![image](https://github.com/user-attachments/assets/dfacbac5-9454-44cb-ac8a-e149b632df48)
+![2024-10-02_20-07-14](https://github.com/user-attachments/assets/d60bd58c-5fd3-481f-8b91-e8f159a6df0a)
 
 Shortest paths:
 
