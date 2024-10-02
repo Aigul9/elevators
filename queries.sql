@@ -11,7 +11,7 @@ RETURN n
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/edges_bidirectional.csv" AS csvLine
 MERGE (start:Floor {id: toInteger(csvLine.start_floor)})
 MERGE (end:Floor {id: toInteger(csvLine.end_floor)})
-MERGE (start)-[:REL {hallway: csvLine.hallway}]-(end)
+MERGE (start)-[:REL {hallway: csvLine.hallway, diff: abs(start.id - end.id)}]-(end)
 
 --тестовые версии
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/aigul9/elevators/master/data/edges_up.csv" AS csvLine
@@ -43,15 +43,17 @@ MATCH p = SHORTEST 2 (from: Floor)-[*]-(to: Floor)
 WHERE from.id = 1 AND to.id = 39
 RETURN p, length(p) AS result
 
+--с глубиной
 MATCH (from: Floor), (to: Floor),
 p = shortestPath((from)-[*..150]-(to)) 
 WHERE from.id = 1 AND to.id = 39
 RETURN p
 
-MATCH (from: Floor), (to: Floor),
-p = shortestPath((from)-[*..150]-(to)) 
-WHERE from.id = 26 AND to.id = 25
-RETURN p
+--с минимальной разницей в количестве этажей
+MATCH p = SHORTEST 3 (from: Floor)-[r*]-(to: Floor)
+WHERE from.id = 26 AND to.id = 14
+RETURN p, length(p) AS result, reduce(total = 0, r IN relationships(p) | total + r.diff) AS total_diff
+ORDER BY total_diff
 
 --выбрать вершину со всеми связями
 MATCH (n WHERE n.id = 27)-[r]-(m)
