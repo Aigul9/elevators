@@ -12,7 +12,7 @@ One of our office buildings has an unusual elevator infrastructure: a double-car
 
 ## Notation
 
-The source data is located in data/
+The source data is located in [data/](https://github.com/Aigul9/elevators/tree/main/data)
 
 Each node represents a floor number.
 
@@ -34,9 +34,9 @@ There are 2 caveats:
 
 Playground is available here: https://browser.neo4j.io/
 
-Credentials are stored in access.properties
+Credentials are stored in [access.properties](https://github.com/Aigul9/elevators/blob/main/access.properties)
 
-Sample queries are listed in queries.sql
+Sample queries are listed in [queries.sql](https://github.com/Aigul9/elevators/blob/main/queries.sql)
 
 Raise an issue if the database is unavailable
 
