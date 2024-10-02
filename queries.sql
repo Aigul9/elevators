@@ -55,6 +55,13 @@ WHERE from.id = 26 AND to.id = 14
 RETURN p, length(p) AS result, reduce(total = 0, r IN relationships(p) | total + r.diff) AS total_diff
 ORDER BY total_diff
 
+--с минимальным количеством пересадок
+MATCH p = SHORTEST 3 (from: Floor)-[r*]-(to: Floor)
+WHERE from.id = 4 AND to.id = 41
+WITH p, length(p) AS result, reduce(total = 0, r IN relationships(p) | total + r.diff) AS total_diff, reduce(total = [], r IN relationships(p) | total + r.hallway) AS hallways
+RETURN p, result, total_diff, hallways, reduce(changes = 0, i IN range(1, size(hallways) - 1) | changes + CASE WHEN hallways[i] <> hallways[i - 1] THEN 1 ELSE 0 END) AS num_changes
+ORDER BY num_changes, total_diff
+
 --выбрать вершину со всеми связями
 MATCH (n WHERE n.id = 27)-[r]-(m)
 RETURN n, r, m
