@@ -55,7 +55,7 @@ WHERE from.id = 36 AND to.id = 24
 WITH
     p,
     length(p) AS result,
-    reduce(total = 0, r IN relationships(p) | total + r.diff) AS total_diff,
+    reduce(total = 0, r IN relationships(p) | total + r.diff) AS total_floors_diff,
     reduce(total = [], r IN relationships(p) | total + r.hallway) AS hallways
 RETURN
     p,
@@ -79,8 +79,8 @@ RETURN
             ELSE 0
         END
     ) AS changes_difficulty,
-    total_diff
-ORDER BY num_changes, changes_difficulty, total_diff
+    total_floors_diff
+ORDER BY num_changes, changes_difficulty, total_floors_diff
 
 --выбрать вершину со всеми связями
 MATCH (n WHERE n.id = 27)-[r]-(m)
