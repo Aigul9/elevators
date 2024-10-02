@@ -28,7 +28,7 @@ Neo4j does not support bidirectional relations, so each directed edge is conside
 
 There are 2 caveats:
 1. Two relations between the same floors refer to the 2 existent ways of reaching the locations.
-2. 'LR' as a hallway attribute means that going up is possible using the left hall and going down - right hall.
+2. 'LR' as a hallway attribute means that the elevator has 2 doors that open to different sides. So going up is possible using the left hall and going down - right hall.
 
 ## Usage
 
